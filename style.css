@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;600&family=Open+Sans:wght@300;500;700;800&family=Roboto+Serif:opsz,wght@8..144,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;600&family=Open+Sans:wght@300;500;700;800&family=Monoton&family=Roboto+Serif:opsz,wght@8..144,200&display=swap');
 /* ! reseteos */
 * {
     margin: 0;
@@ -25,7 +25,7 @@ a {
 }
 
 
-/* * Menu   */
+/* *----------- Menu -------------   */
 .navbar { 
     display: none;
     flex-direction: column;
@@ -82,8 +82,32 @@ a {
     font-size: .8rem;
     color: var(--fontnav);
 }
+.navmenu a:hover {
+    color: var(--celeste);
+    font-size: 1rem;
+    transition: .3s;
+}
 
-/* Menu hamburguesa */
+
+/* Iconos de redes */
+
+.navpages {
+    display: flex;
+    gap: 1rem;
+    margin: 5rem; 
+}
+.navpages a {
+    background-color: transparent;
+}
+.navpages i {
+    color: var(--fontnav);
+}
+.navpages i:hover {
+    color: var(--celeste);
+    transition: .3s;
+}
+    
+/* ----Menu hamburguesa---- */
 .menu {
     display: flex;
     flex-direction: row-reverse;
@@ -92,6 +116,7 @@ a {
 
     height: 15vh;
     width: 100%;
+    max-width: 100vw;
 
     background-color: var(--grismain);
     position: fixed;
@@ -107,32 +132,19 @@ a {
     height: 3.5rem;
 }
 
-/* Iconos de redes */
-.navpages {
-    display: flex;
-    gap: 1rem;
-    margin: 5rem; 
-}
-.navpages a {
-    background-color: transparent;
-}
-.navpages i {
-    color: var(--fontnav);
-}
-
-/** Nav OK  */
 
 
-/* * Main */
+/* * ==========-Main=============*/
 
 main {
     display: flex;
     flex-direction: column;
     height: 100%;
+    gap: 20vh;
     width: auto;
     background: var(--grismain);
 }
-/* Section home */
+/* ==========Section home=========== */
 
 .sectionhome {
     margin-top: 7rem;
@@ -148,51 +160,37 @@ main {
 /* H1 con span */
 
 .sectionhome h1 {
-    display: flex;
     flex-direction: column;
     padding: 4rem 0;
-    width: 100%;
-
+    letter-spacing: -4px;
+    cursor:default;
 }
 .spanx {
-    max-width: 100%;
+    display: inline-block;
     color: white;
     font-weight: var(--medium);
-    font-size: 12vw;
-    letter-spacing: -2px;
+    font-size: 10vw;
     line-height: 95%;
 }
-.spanx:hover {
-    animation: rubberBand 1s;
-}
-
-@keyframes rubberBand {
-    0% {
-        transform: scale3d(1,1,1);
-    }
-    35% {
-        transform: scale3d(1.15,.75,1);
-    }
-    45% {
-        transform: scale3d(.75,1,1);
-    }
-    60% {
-        transform: scale3d(1.2,.8,1);
-    }
-    75% {
-        transform: scale3d(1.05,.92,1);
-    }
-    100% {
-        transform: scale3d(1,1,1);
-    }
+.spanx-a img {
+    width: 10vw;
+    margin-right: -1vw;
     
 }
-
-.spanim img {
-    max-width: 12%; 
-    display: inline-block; 
-    height: auto;
+.spanx-a img:hover {
+    animation: rotacion 1s ease-in-out;
+    transform: rotate3d(20deg 20deg 20deg);
+    color: var(--celeste);
 }
+
+.spanx:hover {
+    animation: rubberBand 1s;
+    color: var(--celeste);
+}
+.spanmr {
+    margin-right: 3vw;
+}
+
 .sectionhome p {
     padding: 0 0 4rem 0;
     color: var(--fontnav);
@@ -201,101 +199,147 @@ main {
     letter-spacing: 3px;
 }
 
-/* boton contacto y see more*/
+    /* boton contact y see more*/
 
-.inputmain {
-    padding: .7rem 2rem;
-    border: 1px solid var(--celeste);
-    
-    letter-spacing: 3px;
-    font-size: 1rem;
-    color: var(--celeste);
-    
-    background-color: transparent;
-    box-shadow: 0px 0px 9px 1px rgba(5,253,216,0.14);
-    -webkit-box-shadow: 0px 0px 9px 1px rgba(5,253,216,0.14);
-    -moz-box-shadow: 0px 0px 9px 1px rgba(5,253,216,0.14);
-}
-
-    /* h2 azul general */
-    .h2-main {
-        padding: 1.5rem 0;
-        font-size: 3.5rem;
-        font-weight: var(--bold);
+    .inputmain {
+        padding: .7rem 2rem;
+        border: 1px solid var(--celeste);
+        
+        letter-spacing: 3px;
+        font-size: 1rem;
         color: var(--celeste);
-    }
-    /* p white general */
-    .p-main {
-        color: white;
-        font-weight: var(--light);
-        font-size: 1.5rem;
-        padding-left: 1rem;
-        padding-bottom: 2rem;
+        
+        background-color: transparent;
+        box-shadow: 0px 0px 9px 1px rgba(5,253,216,0.14);
+        -webkit-box-shadow: 0px 0px 9px 1px rgba(5,253,216,0.14);
+        -moz-box-shadow: 0px 0px 9px 1px rgba(5,253,216,0.14);
     }
 
-/* Section About */
+        /*       h2 Span main     */
+
+        .spanh2main {
+            display: inline-block;
+            padding: 1.5rem 0;
+            font-size: 9vw;
+            font-weight: var(--bold);
+            color: var(--celeste);
+            letter-spacing: -3px;
+        }
+
+        .spanh2main:hover {
+            animation: rubberBand .5s;
+        }
+
+        /*       p white main     */
+        .p-main {
+            color: white;
+            font-weight: var(--light);
+            font-size: 1.5rem;
+            padding-left: 1rem;
+            padding-bottom: 2rem;
+        }
+
+
+/* ==============Section About============== */
 
 .section-about{
-    margin-top: 3rem;
     padding: 3rem 0rem;
     display: flex;
     flex-direction: column;
+    background-image: url(./img-messi/TGPUVUQPXJCEHC7YIWCWUPMLFU.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .aboutback {
     width: 100%;
     padding: 3rem 1rem;
 }
+.aboutback h2{
+    cursor: default;
+}
+
+/* Agregar animacion!!!!! */
 .section-about img{
-    /* height: fit-content; */
-    width: 50vw;
+    width: 30vw;
     margin: 0 auto;
     
 }
 
-/* Section work */
+
+/* =============Section work================ */
 
 .section-work {
-   margin-top: 3rem; 
-   padding: 3rem 1rem;
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
+
 .workback {
     padding: 3rem 0rem;
+    margin-bottom: 3rem;
+}
+.workback input {
+    bottom: 50%;
+    right: 5%;
 }
 
-/* Trabajos */
+.workback img {
+    display: none;
+}
+
+/* Cuadricula de imagenes */
 
 .worklist {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-auto-rows: 33vw 33vw 33vw;
+}
+
+.workitem {
     display: flex;
     justify-content: center;
-    align-items: center; 
-    flex-wrap: wrap;
-}
-.workitem {
-    height: 0;
-    width: 33%;
-    padding-bottom: 33%;
-    background-image: url(./img/sin\ degrade\ \(1\).png);
+    align-items: center;
+    background-image: url(./img-messi/ere343333.png);
+    background-position: center;
     background-size: cover;
-    color: white;
-    border: solid 1px var(--celeste);
+    background-repeat: no-repeat;
+    filter: saturate(20%);
 }
-
-
+.workitem:hover {
+    filter: saturate(300%);
+    transition: 1s;
+}
+.workitem a {
+    opacity: 0;
+    background-image: url(./img/sin\ degrade\ \(1\).png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    z-index: -3;
+}
+.workitem a:hover {
+    transition: 1s;
+    transform: scale(2) rotate(180deg);
+    opacity: 1;
+}
 .w10 {
     display: none;
 }
 
 
-/* Mediaqueries */
 
-/* !Ordenar */
+/* ----------Mediaqueries-------- */
+
+/* DESKTOP */
 
 @media screen and (min-width:1000px) {
-
- /* Navbar */   
+    
+    /* ==========Navbar========== DESKTOP*/   
     .navbar {
         display: flex;
     }
@@ -308,23 +352,30 @@ main {
     }
 
     /* Generales */
-    .h2-main {
-        font-size: 4.5rem;
+    .spanh2main {
+        font-size: 6vw;
     }
     .p-main {
         font-size: 1.5rem;
     }
-
-/* Section home */
-
+    
+    
+    /* ============Section home DESKTOP===========*/
+    
     .sectionhome {
         margin-top: 0;
     }
     .spanx {
-        font-size: 14vh;
+        font-size: 9vw;
+        letter-spacing: -10px;
     }
-    .spanim img {
-        height: 12vh;
+    .spanx-a img {
+        margin-right: -.5rem;
+        height: 9vw;
+        width: min-content;
+    }
+    .spanmr {
+        margin-right: 1.5vw;
     }
     .sectionhome p {
         font-size: 20px;
@@ -332,15 +383,14 @@ main {
     .inputmain {
         font-size: 20px;
     }
-
-    /* Section about */
-
+    
+    /* ===========Section about DESKTOP============*/
+    
     .section-about {
         margin: 5rem 0;
         flex-direction: row;
         align-items: center;
     }
-
     .aboutback {
         width: 60%;
     }
@@ -348,34 +398,143 @@ main {
         width: 10vw;
     }
     
-    /* section work */
+    /*============ section work DESKTOP============*/
     
-    .workitem {
-        width: 20%;
-        padding-bottom: 20%;
+    /* ! --------------------------------------------------------------------revisar */
+    .workback {
+        padding-bottom: 7rem;
+        position: relative;
+        max-width: 100vw;
+        z-index: 1;
+    }
+    .workback p {
+        max-width: 60%;
+    }
+    .workback img {
+        display: inline;
+        position: absolute;
+        right: 0;
+        top: 0;
+        opacity: .1;
+        max-height: 80%;
+        z-index: -1;
+    }
+    .worklist {
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-auto-rows: 20vw;
     }
     .w10 {
         display: inline;
     }
 }
 
-
+/* PHONE */
 @media screen and (max-width:480px) {
-
-    /* Section work */
-    .workitem {
-        width: 50%;
-        padding-bottom: 50%;
+    
+    
+    /* section home PHONE */
+    
+    /* Section work PHONE */
+    .worklist {
+        grid-template-columns: 50% 50%;
+        grid-auto-rows: 50vw;
     }
     .w10 {
         display: inline;
     }
-
+    
     /* Generales */
-    .h2-main {
-        font-size: 2.2rem;    
+    
+    /* section about PHONE */
+    
+    .aboutback {
+        min-width: 300px;
+    }
+    .spanh2main {
+        font-size: 12vw;    
+    }
+    .spanmr {
+        height: 3vw;
     }
     .p-main {
         font-size: 1.3rem;
+    }
+}
+
+
+/* ? aumentar delay de animacion con js */
+
+/* animacion de spans de h1 */
+
+
+
+/* H1 movimiento */
+
+
+@keyframes rubberBand {
+    from {
+        transform: scale3d(1,1,1);
+    }
+    35% {
+        transform: scale3d(1.35,.75,1);
+    }
+    45% {
+        transform: scale3d(.75,1,1);
+    }
+    60% {
+        transform: scale3d(1.2,.8,1);
+    }
+    75% {
+        transform: scale3d(1.05,.92,1);
+    }
+    to {
+        transform: scale3d(1,1,1);
+
+        
+    }
+}
+
+/* Para los workitems */
+
+@keyframes rubberBandlight {
+    0% {
+        transform: scale3d(1 , 1 ,1);
+    }
+    35% {
+        transform: scale3d(.8 , 1.12 ,1);
+    }
+    50% {
+        transform: scale3d(1 , 1 ,1);
+    }
+    75% {
+        transform: scale3d(.9 , 1.1 ,1);
+    }
+    100% {
+        transform: scale3d(1, 1 ,1);
+    }
+    
+}
+
+/* animacion A de h1 */
+@keyframes rotacion {
+    0% {
+        transform: rotate(0);    
+        transform: scale3d(1,1,1);    
+    }
+    20%{
+        transform: rotate(35deg);
+        transform: rotateY(50deg);
+    }
+    40%{
+        transform: rotate(-35deg);
+    }
+    60%{
+        transform: rotate(15deg);
+    }
+    80%{
+        transform: rotate(-15deg);
+    }
+    100%{
+        transform: rotate(0);
     }
 }
